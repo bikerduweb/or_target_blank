@@ -3,7 +3,7 @@
   Plugin Name: Target Blank
   Plugin Author: Olivier Ruffin
   Description: A Wordpress plugin to add a target='_blank' to all post and comments links which are external to the blog
-  Version: 1.1
+  Version: 1.2
   Author: Olivier Ruffin
   Author URI: http://veilleperso.com
 */
