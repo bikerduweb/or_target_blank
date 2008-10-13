@@ -24,5 +24,6 @@ function or_external_link($text) {
 if (!is_feed()) {
   add_filter('comment_text', 'or_external_link', 999);
   add_filter('the_content', 'or_external_link', 999);
+  add_filter('the_excerpt', 'or_external_link', 999);
   add_filter('get_comment_author_link', 'or_external_link', 999);
 }
