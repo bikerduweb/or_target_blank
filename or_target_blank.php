@@ -15,7 +15,7 @@ function or_convert_external_link($matches) {
   else {
     if (preg_match("/(class=['\"])/im", $matches[3], $cls)) $matches[3] = str_replace($cls[1], $cls[1]."external ", $matches[3]);
     else $matches[3].= " class=\"external\"";
-    return "<a$matches[1]href=\"$matches[2]\"$matches[3] target=\"_blank\">";
+    return "<a$matches[1]href=\"$matches[2]\" ".trim($matches[3])." target=\"_blank\">";
   }
 }
 	
