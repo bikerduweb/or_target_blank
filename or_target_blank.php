@@ -8,7 +8,7 @@
   Author URI: http://veilleperso.com
 */
 
-define('OR_INTERNAL_LINK', "/^".preg_quote(get_option("siteurl"), "/i")."/");
+define('OR_INTERNAL_LINK', "/^".preg_replace("/:[\/]{2,2}/", ":\/\/[\/]*", preg_quote(preg_replace("/\/\/www./", "//", get_option("siteurl"))))."/i");
 
 function or_convert_external_link($matches) {
   if (preg_match(OR_INTERNAL_LINK, $matches[2])) return $matches[0];
